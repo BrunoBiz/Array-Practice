@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	product "example.com/array-practice/Product"
+	product "example.com/array-practice/product"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 
 	// 3
 	fmt.Println("3")
-	hobbiesSliced := hobbies[0:2]
+	hobbiesSliced := hobbies[:2]
 	//hobbiesSliced := hobbies[:2]
 	fmt.Println(hobbiesSliced)
 
@@ -42,19 +42,25 @@ func main() {
 
 	// 7
 	fmt.Println("7")
-	product1, err := product.New("Apple", 1, 0.99)
+	/*product1, err := product.New("Apple", 1, 0.99)
 	product2, err := product.New("Orange", 2, 1.99)
-	product3, err := product.New("Banana", 3, 1.50)
+	product3, err := product.New("Banana", 3, 1.50)*/
 
-	if err != nil {
+	/*if err != nil {
 		fmt.Println(err)
 	} else {
 		productList := []product.Product{product1, product2}
 		fmt.Println(productList)
 
 		productList = append(productList, product3)
-		fmt.Println(productList)
-	}
+		fmt.Println(productList)*/
+
+	productList2 := []product.Product{{"Apple", 1, 1.99}, {"Orange", 2, 2.99}}
+	fmt.Println(productList2)
+
+	productList2 = append(productList2, product.Product{"Banana", 3, 3.89})
+	fmt.Println(productList2)
+	//}
 }
 
 // Time to practice what you learned!
